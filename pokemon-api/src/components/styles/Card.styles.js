@@ -9,13 +9,42 @@ export const StyledCard = styled.article`
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15);
     border-radius: 3px;
     background-color: #fff;
+    position: relative;
 
-    img {
-        width: 363.89px;
+    .pokemon {
+        width: 167px;
+        /* background-color: #b5b5b5; */
+        height: 100%;
+        overflow: hidden;
+        display: flex;
     }
 
-    p {
+    .text {
+        height: 100%;
+        /* background-color: #a1a1a1; */
+        padding: 12px 0;
+        width: 196px;
+        /* border: 1px solid green; */
+    }
+
+    .description {
+        margin-bottom: 5`px;
+        color: ${({ theme }) => theme.colors.text};
+        font-weight: 300;
+        font-size: 12px;
+    }
+
+    .data-pokemon {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .ability,
+    .type {
         font-size: 10px;
+        color: ${({ theme }) => theme.colors.text};
+        font-weight: 700;
+        margin-right: 10px;
     }
 
     h2 {
@@ -28,16 +57,23 @@ export const StyledCard = styled.article`
         color: ${({ theme }) => theme.colors.primary};
     }
 
-    .description {
-        font-size: 12px;
-    }
-
     section {
         display: flex;
         flex-direction: column;
+        margin: 2px 0;
+        /* border: 1px solid red; */
+    }
+    .caracteristics {
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid black; */
     }
 
-    .data-pokemon {
-        display: flex;
+    span {
+        position: absolute;
+        bottom: 15px;
+        right: 20px;
+        font-size: 30px;
+        color: ${({ theme }) => theme.colors.primary};
     }
 `;

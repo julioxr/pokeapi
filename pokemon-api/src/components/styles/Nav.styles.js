@@ -7,7 +7,7 @@ export const StyleNav = styled.nav`
     align-items: center;
     height: 35px;
     margin: 37.5px 200px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
     h3 {
         color: #204056;
@@ -18,7 +18,7 @@ export const StyleNav = styled.nav`
 
     ul {
         display: flex;
-        /* margin-top: 4px; */
+        margin-top: 4px;
     }
 
     li {
@@ -26,12 +26,12 @@ export const StyleNav = styled.nav`
         margin: 0 10px;
         font-size: 14px;
         font-weight: 300;
-        color: #204056;
+        color: ${({ theme }) => theme.colors.secondary};
         cursor: pointer;
     }
 
     .red {
-        color: #f65a5b;
+        color: ${({ theme }) => theme.colors.primary};
         font-weight: 700;
     }
 `;
