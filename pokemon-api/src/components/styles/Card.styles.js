@@ -28,7 +28,7 @@ export const StyledCard = styled.article`
     }
 
     .description {
-        margin-bottom: 5`px;
+        margin-bottom: 5px;
         color: ${({ theme }) => theme.colors.text};
         font-weight: 300;
         font-size: 12px;
