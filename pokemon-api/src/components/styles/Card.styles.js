@@ -10,6 +10,7 @@ export const StyledCard = styled.article`
     border-radius: 3px;
     background-color: #fff;
     position: relative;
+    /* margin: 0 200px; */
 
     .pokemon {
         width: 167px;
