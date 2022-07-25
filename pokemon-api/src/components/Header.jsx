@@ -16,10 +16,7 @@ const Header = () => {
 
                     <Formik>
                         <Form>
-                            <Field
-                                placeholder={"Pokemon's name"}
-                                textAlign={"center"}
-                            ></Field>
+                            <Field placeholder={"Pokemon's name"}></Field>
                         </Form>
                     </Formik>
                 </div>

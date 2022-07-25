@@ -1,18 +1,21 @@
-import React from "react";
 import { StyledCard } from "./styles/Card.styles";
 
-const Card = () => {
+const Card = ({ name, abilities, sprites, types }) => {
+    console.log(abilities);
+
+    const capsName = name.charAt(0).toUpperCase() + name.slice(1);
+
     return (
         <>
             <StyledCard>
-                <div className="pokemon">
+                <figure className="pokemon">
                     <img
-                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-                        alt=""
+                        src={sprites.other.dream_world.front_default}
+                        alt={name}
                     />
-                </div>
+                </figure>
                 <div className="text">
-                    <h2>Bulbasaur</h2>
+                    <h2>{capsName}</h2>
                     <p className="description">
                         The seed on its back is filled with nutrients. The seed
                         grows steadily larger as its body grows
@@ -21,15 +24,30 @@ const Card = () => {
                         <section>
                             <h3>Ability</h3>
                             <div className="data-pokemon">
-                                <p className="ability">Overgrow</p>
-                                <p className="ability">Chlorophyll</p>
+                                {abilities.map((ability) => {
+                                    return (
+                                        <p
+                                            className="ability"
+                                            key={ability.ability.name}
+                                        >
+                                            {ability.ability.name
+                                                .charAt(0)
+                                                .toUpperCase() +
+                                                ability.ability.name.slice(1)}
+                                        </p>
+                                    );
+                                })}
                             </div>
                         </section>
                         <section>
                             <h3>Type</h3>
                             <div className="data-pokemon">
-                                <p className="type">Grass</p>
-                                <p className="type">Poison</p>
+                                <p className="type">
+                                    {types[0].type.name
+                                        .charAt(0)
+                                        .toUpperCase() +
+                                        types[0].type.name.slice(1)}
+                                </p>
                             </div>
                         </section>
                     </div>

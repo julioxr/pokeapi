@@ -16,8 +16,14 @@ export const StyledCard = styled.article`
         width: 167px;
         /* background-color: #b5b5b5; */
         height: 100%;
-        overflow: hidden;
         display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 120px;
+            filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.15));
+        }
     }
 
     .text {
