@@ -20,15 +20,28 @@ export const StyleNav = styled.nav`
     ul {
         display: flex;
         margin-top: 4px;
+        gap: 15px;
+        align-items: center;
     }
 
     li {
         list-style: none;
-        margin: 0 10px;
+        text-align: center;
+        /* background-color: red; */
+        /* margin: 0 10px; */
+        transition: all 0.2s ease-in-out;
         font-size: 14px;
         font-weight: 300;
         color: ${({ theme }) => theme.colors.secondary};
         cursor: pointer;
+
+        :hover {
+            color: ${({ theme }) => `${theme.colors.primary}`};
+            font-weight: 700;
+            padding: 4px 8px;
+            background-color: #d4d4d4;
+            border-radius: 5px;
+        }
     }
 
     .red {
@@ -36,11 +49,37 @@ export const StyleNav = styled.nav`
         font-weight: 700;
     }
 
-    /* @media (max-width: 780px) {
-        flex-direction: column;
+    a {
+        text-decoration: none;
+    }
 
-        ul {
-            flex-direction: column;
+    select {
+        display: none;
+    }
+    .paginator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        margin: 0 20px;
+
+        p {
+            padding: 0 10px;
         }
-    } */
+    }
+
+    @media (max-width: 1520px) {
+        select {
+            display: block;
+        }
+        ul {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1140px) {
+    }
+
+    @media (max-width: 780px) {
+    }
 `;

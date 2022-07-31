@@ -1,8 +1,7 @@
 import { StyledCard } from "./styles/Card.styles";
+import { AiFillHeart } from "react-icons/ai";
 
 const Card = ({ name, abilities, sprites, types }) => {
-    console.log(abilities);
-
     const capsName = name.charAt(0).toUpperCase() + name.slice(1);
 
     return (
@@ -52,7 +51,9 @@ const Card = ({ name, abilities, sprites, types }) => {
                         </section>
                     </div>
                 </div>
-                <span>❤</span>
+                <span>
+                    <AiFillHeart />
+                </span>
             </StyledCard>
         </>
     );

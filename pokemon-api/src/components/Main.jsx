@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { StyledMain } from "./styles/Main.styles";
 import { dataContext } from "../context/PokeProvider";
 import Card from "./Card";

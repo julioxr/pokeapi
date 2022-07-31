@@ -19,6 +19,14 @@ function App() {
             <Header />
             <Nav />
             <Main />
+            {/* <input type="text" />
+            <button>Enviar</button>
+            <p>
+                Tarea 1 <span>EDITAR</span>
+            </p>
+            <p>
+                Tarea 2 <span>EDITAR</span>
+            </p> */}
         </ThemeProvider>
     );
 }
