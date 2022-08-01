@@ -78,8 +78,8 @@ export const StyledCard = styled.article`
 
     span {
         position: absolute;
-        bottom: 15px;
-        right: 20px;
+        bottom: 5px;
+        right: 15px;
         font-size: 30px;
         color: ${({ theme }) => theme.colors.primary};
     }

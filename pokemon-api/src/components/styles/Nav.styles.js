@@ -53,7 +53,7 @@ export const StyleNav = styled.nav`
         text-decoration: none;
     }
 
-    select {
+    .select {
         display: none;
     }
     .paginator {
@@ -61,16 +61,25 @@ export const StyleNav = styled.nav`
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
-        margin: 0 20px;
+        margin-left: 20px;
 
         p {
             padding: 0 10px;
         }
+
+        svg {
+            font-size: 30px;
+            fill: ${({ theme }) => `${theme.colors.secondary}`};
+        }
     }
 
     @media (max-width: 1520px) {
-        select {
+        margin: 37.5px 15px;
+        width: auto;
+        justify-content: center;
+        .select {
             display: block;
+            width: 200px;
         }
         ul {
             display: none;

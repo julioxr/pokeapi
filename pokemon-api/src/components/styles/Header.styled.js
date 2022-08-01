@@ -55,8 +55,9 @@ export const StyledHeader = styled.header`
         padding: 0;
 
         img {
-            width: 100px;
-            height: 50px;
+            width: 140px;
+            margin-left: 15px;
+            height: auto;
         }
 
         .menu {
@@ -67,12 +68,15 @@ export const StyledHeader = styled.header`
 
         input {
             box-sizing: content-box;
-            width: 50%;
-            font-size: 14px;
-            height: 40px;
+            width: 150px;
+            font-size: 13px;
+            height: 30px;
+            padding: 0 15px;
         }
         form {
             box-sizing: content-box;
+            display: flex;
+            justify-content: center;
         }
     }
 `;

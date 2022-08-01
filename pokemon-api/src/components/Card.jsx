@@ -41,12 +41,19 @@ const Card = ({ name, abilities, sprites, types }) => {
                         <section>
                             <h3>Type</h3>
                             <div className="data-pokemon">
-                                <p className="type">
-                                    {types[0].type.name
-                                        .charAt(0)
-                                        .toUpperCase() +
-                                        types[0].type.name.slice(1)}
-                                </p>
+                                {types.map((type) => {
+                                    return (
+                                        <p
+                                            className="type"
+                                            key={type.type.name}
+                                        >
+                                            {type.type.name
+                                                .charAt(0)
+                                                .toUpperCase() +
+                                                type.type.name.slice(1)}
+                                        </p>
+                                    );
+                                })}
                             </div>
                         </section>
                     </div>
